@@ -1,0 +1,48 @@
+
+
+body {
+    font-family: Lato, Arial, sans-serif;
+}
+
+h1 {
+    color: #FFFFFF;
+    padding-bottom: 20px;
+    text-align: center;
+    opacity: 0.8;
+    /* font-weight: lighter; */
+    max-width: 50%;
+    margin: auto;
+}
+
+h1 img {
+    position: relative;
+    width: 50px;
+    bottom: -15px;
+}
+
+h1::before {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    background: linear-gradient(to right, rgba(255,255,255,0) 25%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 75%);
+    height: 3px;
+    width: 100%;
+    content: '';
+}
+
+.fish-selector {
+    margin: 40px;
+    text-align: center;
+    color: white;
+}
+
+.fish-selector label{
+  display: block;
+  margin: 15px;
+}
+
+.fish-selector select{
+  text-align: center;
+  display: inline-block;
+  width: 250px;
+}

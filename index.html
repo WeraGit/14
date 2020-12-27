@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <!-- Lato font -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css"></script>
+        <link rel="stylesheet" href="waves.css"></script>
+        
+    </head>
+    <body>
+        <h1><img class="logo" src="https://www.fourteenfish.com/content/fourteenfish/logos/logoapp@2x.png?v=2" /> FourteenFish Aquarium</h1>
+        <div class="content">
+            <div class="fish-selector">
+                <label for="select-fish">Choose your fish!</label>
+                <select id="select-fish">
+                    <option disabled selected>-</option>
+                    <option value="1">Sardine</option>
+                    <option value="25">Minnow</option>
+                    <option value="78">Atlantic Salmon</option>
+                    <option value="132">Sea bass</option>
+                    <option value="157">Mackerel</option>
+                    <option value="170">Herring</option>
+                    <option value="198">Cod</option>
+                </select>
+            </div>
+
+            <div class="fish-info">
+              <div>
+                <h1 id="fish-name"></h1>
+              </div>
+              <div >
+                <p class="fish-description"></p>
+              </div>
+              <div >
+                <img class="fish-image" src="">
+              </div>
+            </div>
+        </div>
+        <div class="wave-effect">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+            </svg>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+
+</html>
