@@ -1,5 +1,5 @@
 $(function(){
-  var fishes;
+    var fishes;
     fetch('https://api.fourteenfish.com/api/v2/developers/coding-task-data')
         .then(function (response) {
           return response.json();
@@ -20,6 +20,12 @@ $(function(){
           console.warn('Something went wrong.', err);
         });
 
+    // function to capitalise the first letters of the names:
+    function capitalise(name) {
+        const finalNames = name.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+        return finalNames;
+    }
+
     $('#select-fish').on('change', function(){
         // todo: display relevant data
         //check if the function 'on-change' works:
@@ -32,10 +38,18 @@ $(function(){
         if ($('#select-fish').val() == fishes[i].id) {
           //below 'alert' is used to check if the 'if statement' works as expected
           // alert('Hello');
-          $('#fish-name').html(fishes[i].name);
+          $('#fish-name').html('Nice, you have chosen:  ' + capitalise(fishes[i].name));
           $('.fish-description').html(fishes[i].description);
-          $('.fish-image').attr('src',fishes[i].image);
+          //cod has no src provided, below should ensure that there is a picture loaded on the page anyway
+          if (fishes[i].id == 198 && fishes[i].image == ""){
+            $('.fish-image').attr('src', 'https://youngsseafood.co.uk/wp-content/uploads/2017/06/atlantic-cod-300x115.png');
+          } else {
+            $('.fish-image').attr('src', fishes[i].image);
+          }
+          
         }
       }
+      //changing the wording of the fish-selector label
+      $('#labelF').html('Why not choose another one?');
     });
 })

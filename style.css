@@ -33,16 +33,44 @@ h1::before {
 .fish-selector {
     margin: 40px;
     text-align: center;
-    color: white;
+    /* color: white; */
+    font-size: 1.5em;
 }
 
 .fish-selector label{
-  display: block;
+  /* display: block; */
   margin: 15px;
+  color: rgb(211, 207, 221);
 }
 
 .fish-selector select{
-  text-align: center;
   display: inline-block;
-  width: 250px;
+  /* width: 250px; */
+  height: 30px;
+  color: rgb(73, 51, 119);
+  font-size: 0.9em;
+  /* border-color: thistle; */
+  border-color: white;
+  border-radius: 5px;
+  background-color: rgb(214, 235, 255);
+  text-align-last:center; 
+}
+.fish-info {
+  text-align: center;
+}
+
+.fish-name {
+  opacity: 0.9;
+  float: left;
+}
+.fish-description {
+  width: 70%;
+  margin: 0% 15%;
+  color: #FFFFFF;
+  text-align: justify;
+}
+
+.fish-image {
+  margin: 2%;
+  max-width: 500px;
 }
