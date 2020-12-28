@@ -1,4 +1,4 @@
-# FourteenFish Developers Coding Task
+# Completed FourteenFish Developers Coding Task
 
 In this coding task we will ask you to display JSON data on a HTML page using JavaScript. 
 
