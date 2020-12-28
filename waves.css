@@ -12,11 +12,11 @@ body {
     bottom: -10px;
     left: 0;
     width: 105%;
-    height: 30vh;
+    height: 25vh;
     margin-bottom: -12px;
     margin-left: -10px;
     min-height: 100px;
-    max-height: 250px;
+    max-height: 200px;
   }
   
   .parallax > use {
