@@ -14,6 +14,26 @@ $(function(){
 
           fishes = data;
 
+          // test
+          // $('#option1').val() = fishes[0].id;
+
+          // inspiration from stack overflow (https://stackoverflow.com/questions/170986/what-is-the-best-way-to-add-options-to-a-select-from-a-javascript-object-with-jq?rq=1)
+          // selectValues = { "1": "test 1", "2": "test 2" };
+          // for (key in selectValues) {
+          //   if (typeof (selectValues[key] == 'string') ){
+          //     $('#mySelect').append('<option value="' + key + '">' 
+          //         + selectValues[key] + '</option>');
+          //   }
+          // }
+
+
+          for (i=0; i<fishes.length; i++) {
+                $('#select-fish')
+                  .append($("<option></option>")
+                  .attr("value", fishes[i].id)
+                  .text(fishes[i].name)); 
+          };   
+
           //test: trying to insert data to the fish name section
           // $('#fish-name').html(fishes[0].name);                  
 
