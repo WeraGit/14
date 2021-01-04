@@ -1,6 +1,10 @@
 $(function(){
 
     var fishes;
+    function capitalise(name) {
+      const finalNames = name.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+      return finalNames;
+    }
     
     fetch('https://api.fourteenfish.com/api/v2/developers/coding-task-data')
         .then(function (response) {
@@ -31,7 +35,7 @@ $(function(){
                 $('#select-fish')
                   .append($("<option></option>")
                   .attr("value", fishes[i].id)
-                  .text(fishes[i].name)); 
+                  .text(capitalise(fishes[i].name))); 
           };   
 
           //test: trying to insert data to the fish name section
@@ -43,10 +47,7 @@ $(function(){
         });
 
     // function to capitalise the first letters of the names:
-    function capitalise(name) {
-        const finalNames = name.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
-        return finalNames;
-    }
+
 
     $('#select-fish').on('change', function(){
         // todo: display relevant data
